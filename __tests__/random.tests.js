@@ -1,0 +1,1 @@
+checkIfEqual = require('../lib/')
