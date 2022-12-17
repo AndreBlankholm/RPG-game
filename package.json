@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/AndreBlankholm/RPG-game/issues"
   },
-  "homepage": "https://github.com/AndreBlankholm/RPG-game#readme"
+  "homepage": "https://github.com/AndreBlankholm/RPG-game#readme",
+  "devDependencies": {
+    "jest": "^29.3.1"
+  }
 }
