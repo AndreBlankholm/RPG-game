@@ -72,3 +72,12 @@ test('subtracts from players health', () => {
   expect(player.health).toBe(0);
 
 });
+
+//  The following code shows how to create a new test that verifies that a player's attack value is within range:
+test('gets players attack values', () => {
+  const player = new Player('Dave');
+  player.strength = 10;
+
+  expect(player.getAttackValue()).toBeGreaterThanOrEqual(5);
+  expect(player.getAttackValue()).toBeLessThanOrEqual(15);
+});
