@@ -43,9 +43,10 @@ test('gets inventory from player or returns false', () => {
 test('gets player health value', () => {
   const player = new Player('Dave');
 
-  
+// here the .toString is concatennating the player data so the Game will only have to display the data.
   expect(player.getHealth()).toEqual(expect.stringContaining(player.health.toString()));
 });
+
 
 test('checks to see if player is still alive', () => {
   const player = new Player('Dave');
@@ -80,4 +81,25 @@ test('gets players attack values', () => {
 
   expect(player.getAttackValue()).toBeGreaterThanOrEqual(5);
   expect(player.getAttackValue()).toBeLessThanOrEqual(15);
+});
+
+
+ // Test in Player.test.js to check that a Potion was added correctly.
+test('adds a potion to the inventory', () => {
+  const player = new Player('Dave');
+  const oldCount = player.inventory.length;
+
+  player.addPotion(new Potion());
+
+  expect(player.inventory.length).toBeGreaterThan(oldCount);
+});
+
+test('uses a potion from inventory', () => {
+  const player = new Player('Dave');
+  player.inventory = [new Potion(), new Potion(), new Potion()];
+  const oldCount = player.inventory.length;
+
+  player.usePotion(1);
+
+  expect(player.inventory.length).toBeLessThan(oldCount);
 });
