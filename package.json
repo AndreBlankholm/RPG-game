@@ -18,5 +18,8 @@
   "homepage": "https://github.com/AndreBlankholm/RPG-game#readme",
   "devDependencies": {
     "jest": "^29.3.1"
+  },
+  "dependencies": {
+    "inquirer": "^8.2.4"
   }
 }
